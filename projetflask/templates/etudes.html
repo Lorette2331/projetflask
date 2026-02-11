@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Études</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header>
+        <div class="container nav">
+            <div class="brand">Mon Portfolio</div>
+            <nav class="links">
+                <a href="/">Présentation</a>
+                <a href="/etudes">Études</a>
+                <a href="/contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Mes études</h1>
+        <p>Voici mon parcours, sous forme simple et claire.</p>
+
+        <div class="grid">
+            <!-- ✅ LA CARTE "POINTS D'ÉTUDES" -->
+            <section class="card">
+                <h2>📚 Parcours (points d’études)</h2>
+                <ul>
+                    <li><strong>2024 - 2026 :</strong> DEUST Webmaster & Métiers de l’Internet</li>
+                    <li><strong>Ce que j’apprends :</strong> HTML, CSS, bases JavaScript, gestion de projet web</li>
+                    <li><strong>Outils :</strong> Git/GitHub, Photoshop/Canva, WordPress</li>
+                    <li><strong>Objectif :</strong> communication digitale / community management + graphisme</li>
+                </ul>
+            </section>
+
+            <section class="card">
+                <h2>🎯 Mes missions d'alternance</h2>
+                <ul>
+                    <li>Animation des réseaux sociaux de l’établissement</li>
+                    <li>Création de visuels engageants (affiches, publications, stories)</li>
+                    <li>Rédaction de contenus adaptés aux différentes plateformes</li>
+                    <li>Organisation de forums, journées portes ouvertes, événements...</li>
+
+                </ul>
+            </section>
+        </div>
+
+        <div class="btns">
+            <a class="btn outline" href="/">⬅ Retour</a>
+            <a class="btn" href="/contact">Contact</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">© 2026 — Portfolio</div>
+    </footer>
+</body>
+
+</html>

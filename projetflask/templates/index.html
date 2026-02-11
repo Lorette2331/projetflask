@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Présentation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header>
+        <div class="container nav">
+            <div class="brand">Mon Portfolio</div>
+            <nav class="links">
+                <a href="/">Présentation</a>
+                <a href="/etudes">Études</a>
+                <a href="/contact">Contact</a>
+                <a href="/map">Carte</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <span class="badge">Étudiant(e) • Web</span>
+            <h1>Bonjour, moi c’est <strong>Lorette</strong> 👋</h1>
+            <p>
+                Je m’appelle Lorette Dassonneville, étudiante en DEUST Webmaster et Métiers de l’Internet à l’ULCO de
+                Calais.
+                Je suis actuellement alternante en communication à l’École des Métiers du Sport à Boulogne-sur-Mer.
+
+                Passionnée par la communication digitale, le graphisme et les réseaux sociaux, je souhaite évoluer vers
+                le métier de chargée de communication.
+                Je m’intéresse particulièrement à la création de contenus, à la valorisation d’une image de marque et au
+                développement d’une communication cohérente et impactante.
+            </p>
+
+            <div class="btns">
+                <a class="btn" href="/etudes">Voir mon parcours</a>
+                <a class="btn outline" href="/contact">Me contacter</a>
+            </div>
+        </section>
+
+        <div class="grid">
+            <section class="card">
+                <h2>Compétences</h2>
+                <ul>
+                    <li>Créativité</li>
+                    <li>Autonomie</li>
+                    <li>Sens de l’organisation</li>
+                    <li>Aisance relationnelle</li>
+                </ul>
+            </section>
+
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">© 2026 — Portfolio</div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Carte</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Leaflet CSS (dans le <head>) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- IMPORTANT : donner une hauteur à la map -->
+    <style>
+        #map {
+            height: 420px;
+            width: 100%;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, .08);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container nav">
+            <div class="brand">Mon Portfolio</div>
+            <nav class="links">
+                <a href="/">Présentation</a>
+                <a href="/etudes">Études</a>
+                <a href="/contact">Contact</a>
+                <a href="/map">Carte</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 36px 0;">
+        <h1>Ma carte de localisation</h1>
+        <p>Voici un repère sur la carte (Calais).</p>
+
+        <div id="map"></div>
+    </main>
+
+    <footer>
+        <div class="container">© 2026 — Portfolio</div>
+    </footer>
+
+    <!-- Leaflet JS (à la fin du body) -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <script>
+        const lat = 50.9513;
+        const lon = 1.8587;
+
+
+        const map = L.map("map").setView([lat, lon], 15);
+
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            attribution: "© OpenStreetMap",
+        }).addTo(map);
+
+        L.marker([lat, lon]).addTo(map).bindPopup("Calais").openPopup();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Contact</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header>
+        <div class="container nav">
+            <div class="brand">Mon Portfolio</div>
+            <nav class="links">
+                <a href="/">Présentation</a>
+                <a href="/etudes">Études</a>
+                <a href="/contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Contact</h1>
+        <p>Tu peux me contacter ici :</p>
+
+        <div class="grid">
+            <section class="card">
+                <h2>📩 Email</h2>
+                <p><a class="btn" href="mailto:lorettedass31@gmail.com">Envoyer un mail</a></p>
+            </section>
+
+            <section class="card">
+                <h2>🔗 LinkedIn</h2>
+                <p>
+                    <a class="btn outline" target="_blank" rel="noreferrer" href="https://www.linkedin.com/">
+                        Ouvrir LinkedIn
+                    </a>
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">© 2026 — Portfolio</div>
+    </footer>
+</body>
+
+</html>

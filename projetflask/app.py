@@ -1,14 +1,22 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route('/')
-def home():
-    return "Bienvenue sur ma page d'accueil !"
+@app.route("/")
+def presentation():
+    return render_template("index.html")
 
-@app.route('/about')
-def about():
-    return "À propos de moi : Je suis en train d'apprendre à développer des applications web avec Flask !"
+@app.route("/etudes")
+def etudes():
+    return render_template("etudes.html")
 
-if __name__ == '__main__':
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+
+@app.route("/map")
+def map():
+    return render_template("map.html")
+
+if __name__ == "__main__":
     app.run(debug=True, port=5000)

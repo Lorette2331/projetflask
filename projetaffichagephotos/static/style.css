@@ -1,0 +1,123 @@
+/* ===== BASE ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f9fafb;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* ===== NAVIGATION ===== */
+
+nav {
+    background: #ffffff;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+/* ===== CONTENU ===== */
+
+.container {
+    max-width: 950px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+/* ===== GALERIE ===== */
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.image-item {
+    background: white;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.image-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* ===== IMAGE PRINCIPALE ===== */
+
+.viewer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#mainImage {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+/* ===== FORMULAIRE ===== */
+
+select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
