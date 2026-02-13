@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Projet2 - Images</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>Galerie</h1>
+
+    <h2>Réglages</h2>
+
+    <form method="POST" action="/process" enctype="multipart/form-data" class="barre-reglages">
+        <label for="file">Image</label>
+        <input id="file" name="file" type="file" accept="image/*" required>
+
+        <label for="algo">Algorithme</label>
+        <select id="algo" name="algo">
+            <option value="original" {% if algo=="original" %}selected{% endif %}>Original</option>
+            <option value="kmeans" {% if algo=="kmeans" %}selected{% endif %}>KMeans (couleurs)</option>
+            <option value="hc" {% if algo=="hc" %}selected{% endif %}>HC (dendrogramme)</option>
+
+        </select>
+
+        <label for="k">Nombre K</label>
+        <input type="number" id="k" name="k" min="2" max="32" value="{{ k or 6 }}" style="width:60px;">
+
+        <button type="submit">Appliquer</button>
+    </form>
+
+    <h2>Affichage</h2>
+
+    {% if result %}
+    <p><strong>KMeans</strong> (K={{ k }})</p>
+    <img src="{{ url_for('static', filename='processed/' + result) }}" alt="Image traitée"
+        style="max-width:700px;width:100%;height:auto;">
+    {% elif img %}
+    <p><strong>Original</strong></p>
+    <img src="{{ url_for('static', filename='uploads/' + img) }}" alt="Image"
+        style="max-width:300px;width:100%;height:auto;">
+    {% else %}
+    <p>Aucune image à afficher.</p>
+    {% endif %}
+
+    {% if dendro %}
+    <h3>Dendrogramme</h3>
+    <img src="{{ url_for('static', filename='processed/' + dendro) }}" alt="Dendrogramme"
+        style="max-width:700px;width:100%;height:auto;">
+    {% endif %}
+
+</body>
+
+</html>
